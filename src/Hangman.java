@@ -38,11 +38,11 @@ public class Hangman {
     }
 
 
-
     public boolean play(char guess) {
         String HighestNumKey = output;
         boolean guessRight = false;
         HashMap<String, ArrayList<String>> wordChoices = new HashMap<>();
+
 
 
 //checks to see which characters were used already.
@@ -79,10 +79,9 @@ public class Hangman {
                     HighestNumKey = keyString;
                 }
             }
-            System.out.println(wordList);
             wordList = wordChoices.get(HighestNumKey);// makes new wordlist using largest with characters removed.
-
             output = HighestNumKey;
+            System.out.println(wordList);
 
             // System.out.println(wordList);
             System.out.println(output);
@@ -91,8 +90,6 @@ public class Hangman {
 
         }return true;
     }
-
-
 
 
     //creates a new array list if hashmap contains null. if it contains key then it inserts string into arraylist under that key.
